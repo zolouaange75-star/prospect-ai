@@ -24,3 +24,8 @@ export const prospects = [
     next_follow_up: "2026-10-02",
   },
 ];
+export const dashboardStats = {
+  totalProspects: 128,
+  pendingFollowUps: 42,
+  highPriority: 12,
+};

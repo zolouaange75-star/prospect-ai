@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { prospects } from "../data/mockProspects";
-
+import StatusBadge from "../components/StatusBadge";
 function Relances() {
   const aRelancer = prospects
     .filter((p) => p.next_follow_up)
@@ -19,7 +19,7 @@ function Relances() {
           >
             <div>
               <p className="font-medium text-ink">{prospect.company}</p>
-              <p className="text-sm text-ink-soft">{prospect.status}</p>
+              <StatusBadge status={prospect.status} />
             </div>
             <span className="font-mono text-sm text-alert">
               {prospect.next_follow_up}

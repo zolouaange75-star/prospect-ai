@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { prospects } from "../data/mockProspects";
-
+import StatusBadge from "../components/StatusBadge";
 const columns = ["A contacter", "Qualifié", "Relance", "Converti"];
 
 function Pipeline() {
@@ -30,6 +30,7 @@ function Pipeline() {
                     <span className="font-mono text-xs text-gold">
                       {prospect.score}/100
                     </span>
+                    <StatusBadge status={prospect.status} />
                   </Link>
                 ))}
               </div>

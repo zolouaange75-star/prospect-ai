@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { prospects } from "../data/mockProspects";
-
+import StatusBadge from "../components/StatusBadge";
 function Prospects() {
   return (
     <div>
@@ -19,7 +19,7 @@ function Prospects() {
             </div>
             <div className="flex items-center gap-4">
               <span className="font-mono text-gold">{prospect.score}/100</span>
-              <span className="text-sm text-brand">{prospect.status}</span>
+              <StatusBadge status={prospect.status} />
             </div>
           </Link>
         ))}

@@ -14,7 +14,7 @@ function Relances() {
         {aRelancer.map((prospect) => (
           <Link
             key={prospect.id}
-            to={`/prospects/${prospect.id}`}
+            to={`/app/prospects/${prospect.id}`}
             className="flex items-center justify-between px-4 py-3 border-b border-gray-100 last:border-0 hover:bg-gray-50"
           >
             <div>

@@ -22,7 +22,7 @@ function Pipeline() {
                 {items.map((prospect) => (
                   <Link
                     key={prospect.id}
-                    to={`/prospects/${prospect.id}`}
+                    to={`/app/prospects/${prospect.id}`}
                     className="block bg-white rounded-lg border border-gray-200 p-3 hover:border-brand"
                   >
                     <p className="font-medium text-sm">{prospect.company}</p>

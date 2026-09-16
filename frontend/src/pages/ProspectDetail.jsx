@@ -5,20 +5,21 @@ function ProspectDetail() {
   const { id } = useParams();
   const prospect = prospects.find((p) => p.id === Number(id));
 
+
   if (!prospect) {
     return <p>Prospect introuvable.</p>;
   }
 
   return (
     <div>
-      <Link to="/prospects" className="text-sm text-brand hover:underline">
+     <Link to="/app/prospects" className="text-sm text-brand hover:underline">
         ← Retour à la liste
       </Link>
 
       <h1 className="text-2xl font-semibold mt-4 mb-1">{prospect.company}</h1>
       <p className="text-ink-soft mb-6">{prospect.sector}</p>
 
-      <div className="bg-white rounded-lg border border-gray-200 p-5 max-w-sm">
+      <div className="bg-white rounded-lg border border-gray-200 p-5 max-w-md">
         <div className="flex justify-between py-2 border-b border-gray-100">
           <span className="text-ink-soft">Score IA</span>
           <span className="font-mono text-gold">{prospect.score}/100</span>
@@ -27,7 +28,20 @@ function ProspectDetail() {
           <span className="text-ink-soft">Statut</span>
           <span className="text-brand">{prospect.status}</span>
         </div>
+        <div className="flex justify-between py-2">
+          <span className="text-ink-soft">Prochaine relance</span>
+          <span className="text-ink-soft">
+            {prospect.next_follow_up
+              ? new Date(prospect.next_follow_up).toLocaleDateString("fr-FR", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric",
+                })
+              : "-"}
+          </span>
+        </div>
       </div>
+      
     </div>
   );
 }

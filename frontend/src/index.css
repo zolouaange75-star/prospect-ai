@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1A1A18;
+  --color-ink-soft: #4A4A46;
+  --color-cockpit: #0F1729;
+  --color-cockpit-light: #1A2740;
+  --color-paper: #F7F5F0;
+  --color-brand: #2C5F5D;
+  --color-brand-light: #3D7A77;
+  --color-gold: #D4A24C;
+  --color-alert: #B23B3B;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
